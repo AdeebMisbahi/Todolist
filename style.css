@@ -31,9 +31,10 @@ body {
   
   form {
     margin: 0 auto;
-    max-width: 500px;
+    max-width: 400px;
     display: flex;
     margin-bottom: 20px;
+    padding: 0px 20px;
   }
 
   
@@ -88,7 +89,7 @@ body {
     box-shadow: 1px .5px 0px 0px white; 
   }
   button:hover {
-    background-color: #001f29;
+    background-color: hsl(195, 100%, 8%);
   }
 
  
@@ -101,7 +102,7 @@ body {
   }
   
   li {
-    max-width: 400px;
+    max-width: 500px;
     display: flex;
     align-items: center;
     margin:0 auto;
@@ -135,7 +136,7 @@ body {
   }
   
 .tasks-detail{
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
   color:#ddd;
   opacity: 0.7;
