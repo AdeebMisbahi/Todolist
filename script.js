@@ -14,31 +14,6 @@ const tasksCount=document.getElementById('tasks-counter');
 
 const completedCount=document.getElementById('completed-count');
 
-function fetchTodos(){
-// Get request
- fetch('https://jsonplaceholder.typicode.com/todos')
- .then(function(response){
-   return response.json();
- }).then(function(data){
-    tasks=data.slice(0,4);
-    renderList();
-    
- })
- .catch(function(error){
-    console.log('error', error);
- })
-
-}
-
-// function to show notification
-function showNotification(text){
-    alert(text);
-}
-// Function to Update the completed tasks
-function updateCompletedCount(){
-    const count=tasks.filter(task=>task.completed).length;
-    completedCount.innerHTML=count;
-}
 
 // function addtaskToDom
 function addTasktoDOM(task){
@@ -69,6 +44,15 @@ deleteBtn.setAttribute('data-id', task.id);
   li.appendChild(deleteBtn);
   todoList.appendChild(li);
 
+}
+// function to show notification
+function showNotification(text){
+    alert(text);
+}
+// Function to Update the completed tasks
+function updateCompletedCount(){
+    const count=tasks.filter(task=>task.completed).length;
+    completedCount.innerHTML=count;
 }
 
 // function to render list
@@ -149,7 +133,21 @@ function handleClickEvent(e){
     }
 }
 
-
+function fetchTodos(){
+    // Get request
+     fetch('https://jsonplaceholder.typicode.com/todos')
+     .then(function(response){
+       return response.json();
+     }).then(function(data){
+        tasks=data.slice(0,4);
+        renderList();
+        
+     })
+     .catch(function(error){
+        console.log('error', error);
+     })
+    
+    }
 
 // function to initialize the App
 function initialize(){
