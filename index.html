@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+      <!-- font awesome (https://fontawesome.com) for basic icons; source: https://cdnjs.com/libraries/font-awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+
+</head>
+<body>
+    
+        <div class="container">
+            
+          <h1>To-Do List</h1>
+          <form id="todo-form">
+            <input type="text" id="todo-input" placeholder="Enter a task">
+            <button type="submit">Add</button>
+          </form>
+         
+          <ul id="todo-list">
+           
+
+        <!-- List items will be added dynamically using JavaScript  (basic format)
+            <li>
+               <span> items added to this list:</span>
+                
+                <button class="chech-btn">check</button>
+                <button class="delele-btn">delete</button>
+            </li>
+         --> 
+
+          </ul>
+          <div class="tasks-detail">
+     <span id="total-tasks">Total Tasks: <span id="tasks-counter">0</span></span>
+     <span id="completed-tasks">Completed Tasks: <span id="completed-count">0</span></span>
+     
+        </div>
+        <script src="script.js"></script>
+</body>
+</html>
