@@ -34,7 +34,7 @@ body {
     max-width: 400px;
     display: flex;
     margin-bottom: 20px;
-    padding: 0px 20px;
+    
   }
 
   
@@ -159,9 +159,4 @@ body {
   font-size: 12px;
 }
 
-/* responsive design */
-@media screen and (max-width){
-  
-}
- 
   
