@@ -15,6 +15,17 @@ const tasksCount=document.getElementById('tasks-counter');
 const completedCount=document.getElementById('completed-count');
 
 
+
+// function to show notification
+function showNotification(text){
+    alert(text);
+}
+// Function to Update the completed tasks
+function updateCompletedCount(){
+    const count=tasks.filter(task=>task.completed).length;
+    completedCount.innerHTML=count;
+}
+
 // function addtaskToDom
 function addTasktoDOM(task){
 // create todo lists item => li , check btn, delete btn
@@ -44,15 +55,6 @@ deleteBtn.setAttribute('data-id', task.id);
   li.appendChild(deleteBtn);
   todoList.appendChild(li);
 
-}
-// function to show notification
-function showNotification(text){
-    alert(text);
-}
-// Function to Update the completed tasks
-function updateCompletedCount(){
-    const count=tasks.filter(task=>task.completed).length;
-    completedCount.innerHTML=count;
 }
 
 // function to render list
