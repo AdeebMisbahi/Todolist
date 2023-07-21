@@ -121,6 +121,7 @@ body {
     overflow-wrap: anywhere;
     
   }
+  
   .checked{
     text-decoration: line-through;
   }
@@ -131,8 +132,13 @@ body {
     color: white;
     border: none;
     border-radius: 500px;
+    pointer-events: auto;
     cursor: pointer;
     transition: background-color 0.3s ease;
+  }
+  .check-btn i,
+  .delete-btn i{
+    pointer-events: none;
   }
   
 .tasks-detail{

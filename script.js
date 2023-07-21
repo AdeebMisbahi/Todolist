@@ -89,6 +89,7 @@ function deleteTask(taskId){
     const newTasks=tasks.filter(function(task){
         return task.id!==Number(taskId);
     })
+    
     tasks=newTasks;
     renderList();
 }
@@ -113,8 +114,9 @@ function taskAddedHandler(e){
     showNotification('You must write something')
 }else{
    const task={
+    userId:1,
+    id:Date.now(),
     title:title,
-    id:Date.now().toString(),
     completed:false
    }
    input.value='';
